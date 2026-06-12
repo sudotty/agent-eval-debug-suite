@@ -17,27 +17,25 @@ A production-oriented eval system should help teams:
 5. Track cost, latency, and success rate.
 6. Decide whether a version is ready.
 
-## Core workflow
+## MVP target
+
+Build an eval suite that can run a small dataset through two agent versions, ingest traces, run deterministic checks, classify failures, and produce a release recommendation.
 
 ```text
-Eval dataset
-  ↓
-Run baseline agent
-  ↓
-Run candidate agent
-  ↓
-Collect trace and tool calls
-  ↓
-Run deterministic checks
-  ↓
-Run LLM-as-judge scoring
-  ↓
-Classify failures
-  ↓
-Compare quality, cost, and latency
-  ↓
-Generate release recommendation
+eval cases -> baseline run -> candidate run -> trace ingestion -> checks -> failure labels -> comparison -> recommendation
 ```
+
+## Prioritized roadmap
+
+| Priority | Workstream | Outcome |
+|---|---|---|
+| P0 / MVP | Eval dataset and result schema | Agent behavior can be tested with stable cases |
+| P0 / MVP | Trace ingestion and timeline | Failures are linked to concrete steps |
+| P0 / MVP | Deterministic checks | Simple failures are caught without extra model calls |
+| P1 | LLM judge scoring | Subjective quality can be scored with a rubric |
+| P1 | Failure taxonomy | Failures become actionable categories |
+| P1 | Baseline vs candidate gate | A version can be accepted, warned, or rejected |
+| P2 | Interview notes and demo | The project is easy to explain to AI eval teams |
 
 ## Core features
 
@@ -45,16 +43,16 @@ Generate release recommendation
 |---|---|
 | Eval dataset | Stable test cases with expected behavior |
 | Baseline vs candidate | Compare two agent versions |
-| Trace viewer | Inspect model calls, retrieval, tool calls, and state transitions |
-| Deterministic checks | Validate schema, citations, tool args, and policies |
-| LLM-as-judge | Score answer quality when deterministic checks are insufficient |
-| Failure taxonomy | Context, retrieval, tool, policy, control, output |
+| Trace viewer | Inspect model calls, retrieval, external actions, and state transitions |
+| Deterministic checks | Validate schema, citations, arguments, and policy |
+| LLM judge | Score answer quality when rule checks are insufficient |
+| Failure taxonomy | Context, retrieval, action, policy, control, output |
 | Cost per success | Tie quality to operating cost |
 | Release recommendation | Decide whether a version is safe enough to ship |
 
 ## Interview value
 
-This project helps explain agent evaluation, regression detection, failure debugging, careful use of LLM-as-judge, and release decisions for production AI systems.
+This project helps explain agent evaluation, regression detection, failure debugging, careful use of LLM judging, and release decisions for production AI systems.
 
 ## Status
 
