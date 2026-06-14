@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720">
+  <rect width="1200" height="720" fill="#f7f8fa"/>
+  <rect x="60" y="60" width="1080" height="600" rx="24" fill="#ffffff" stroke="#d0d7de"/>
+  <text x="96" y="120" font-family="Arial" font-size="34" font-weight="700" fill="#24292f">Agent Eval &amp; Debug Suite</text>
+  <text x="96" y="160" font-family="Arial" font-size="18" fill="#57606a">Case List → Two Runs → Result Table → Step Timeline → Summary Note</text>
+  <g font-family="Arial" font-size="18" fill="#24292f">
+    <rect x="96" y="220" width="160" height="92" rx="14" fill="#f6f8fa" stroke="#d0d7de"/><text x="134" y="272">Cases</text>
+    <rect x="296" y="220" width="160" height="92" rx="14" fill="#f6f8fa" stroke="#d0d7de"/><text x="346" y="272">Run A</text>
+    <rect x="496" y="220" width="160" height="92" rx="14" fill="#f6f8fa" stroke="#d0d7de"/><text x="546" y="272">Run B</text>
+    <rect x="696" y="220" width="170" height="92" rx="14" fill="#f6f8fa" stroke="#d0d7de"/><text x="742" y="272">Timeline</text>
+    <rect x="906" y="220" width="160" height="92" rx="14" fill="#f6f8fa" stroke="#d0d7de"/><text x="950" y="272">Report</text>
+  </g>
+  <text x="96" y="410" font-family="Arial" font-size="22" font-weight="700" fill="#24292f">Showcase value</text>
+  <text x="96" y="450" font-family="Arial" font-size="18" fill="#57606a">Make quality changes visible through repeated cases and clear summaries.</text>
+  <text x="96" y="500" font-family="Arial" font-size="18" fill="#57606a">Strong demo point: compare two versions without hiding the steps.</text>
+</svg>
